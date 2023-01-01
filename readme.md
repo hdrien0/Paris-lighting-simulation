@@ -12,7 +12,7 @@ Notice the illuminance reading on the top right.
 ![simulation](https://i.imgur.com/c9CXBRb.gif)  
 Simulation of two light poles side to side.
 
-[**Live demo**](https://izipakboy.github.io/Paris-lighting-simulation/index.html)  
+[**Live demo | *Place de l'Odéon* (100m)**](https://izipakboy.github.io/Paris-lighting-simulation/index.html)  
 (Click anywhere to add a light source)
 
 ## Features  
