@@ -115,7 +115,7 @@ Based on Leflet.idw, see the following comment.
                 // draw a grayscale illuminance map by putting a cell at each data point
                 for (var i = 0, len = this._data.length, p; i < len; i++) {
                     p = this._data[i];
-                    ctx.globalAlpha = p[2] / this._max;
+                    ctx.globalAlpha = Math.min(p[2],this._max) / this._max;
                     ctx.drawImage(this._cell, p[0] - this._r, p[1] - this._r);
                 }
     
