@@ -12,14 +12,14 @@ Notice the illuminance reading on the top right.
 ![simulation](https://i.imgur.com/c9CXBRb.gif)  
 Simulation of two light poles side to side.
 
-[**Live example**](https://izipakboy.github.io/Paris-lighting-simulation/index.html)  
+[**Live demo**](https://izipakboy.github.io/Paris-lighting-simulation/index.html)  
 (Click anywhere to add a light source)
 
 ## Features  
 
 * Simulate and visualise the lighting of any given area in Paris in the form of an interactive web map
 * Read the calculated illuminance of a point on the street by hovering the pointer over it
-* *In the future:* calculate the uniformity of the lighting of an area
+* *Upcoming:* calculate the uniformity of the lighting of an area
 
 ## Installation and usage
 * **Requirements**:
