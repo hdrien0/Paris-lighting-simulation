@@ -1,0 +1,37 @@
+beautifulsoup4==4.9.3
+  soupsieve==2.2.1
+collection==0.1.6
+cssmin==0.2.0
+folium==0.12.1.post1
+  branca==0.5.0
+    Jinja2==3.1.1
+      MarkupSafe==2.1.1
+  Jinja2==3.1.1
+    MarkupSafe==2.1.1
+  numpy==1.22.3
+  requests==2.25.1
+    certifi==2020.12.5
+    chardet==4.0.0
+    idna==2.10
+    urllib3==1.26.4
+imgkit==1.1.0
+jsmin==2.2.2
+pip==21.0.1
+pipdeptree==2.3.3
+pipreqs==0.4.11
+  docopt==0.6.2
+  yarg==0.1.9
+    requests==2.25.1
+      certifi==2020.12.5
+      chardet==4.0.0
+      idna==2.10
+      urllib3==1.26.4
+pylint==2.7.4
+  astroid==2.5.2
+    lazy-object-proxy==1.6.0
+    wrapt==1.12.1
+  colorama==0.4.4
+  isort==5.8.0
+  mccabe==0.6.1
+  toml==0.10.2
+setuptools==49.2.1
