@@ -15,6 +15,7 @@ parser = argparse.ArgumentParser(description='')
 parser.add_argument('--location','-l', required=True)
 parser.add_argument('--distance','-d', required=False,default=100)
 parser.add_argument('--cellSize',required=False,default=4)
+parser.add_argument('--gradientMax',required=False,default=80)
 args = parser.parse_args()
 
 coords = getCoordinatesFromStreetName(args.location)
@@ -27,7 +28,7 @@ buildings = buildingsGdf.geometry
 
 M = folium.Map(location=coords, tiles="cartodb positron", zoom_start=20, control_scale=True, max_zoom = 21)
 
-Illuminance(LAMPS,buildings.to_json(),opacity=0.3,maxZoom=16,cellSize=int(args.cellSize),max=80).add_to(M)
+Illuminance(LAMPS,buildings.to_json(),opacity=0.3,maxZoom=16,cellSize=int(args.cellSize),max=int(args.gradientMax)).add_to(M)
 
 displayGeoseries(M,buildings,style2)
 

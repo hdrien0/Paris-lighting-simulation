@@ -86,6 +86,7 @@ Simulation of two light poles side to side.
 * A feature to calculate the uniformity of the lighting of a given area
 * Performance improvements
 * Implement streaming the data from the databases instead of having it included it in the html file, so that the python generation isn't needed anymore
+* Implement a non-linear gradient to accurately display high illuminance values (for now the max illuminance value can be set with ```--gradientMax```, default is 80 lux)
 * Obtain luminous intensity distribution diagrams for common light appliances to increase the simulation accuracy
 
 **Don't hesitate to contribute or to contact me!**
