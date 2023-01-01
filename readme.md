@@ -75,8 +75,7 @@ Simulation of two light poles side to side.
     * ```leaflet-illuminance.js``` is the leaflet plugin and handles the leaflet integration along with the rendering.
     * ```illuUtils.js``` contains the core functions to simulate the lighting and calculate the illuminance of a point
     * ```extra.js``` includes the javascript dependencies listed earlier. It can be recreated by doing the following:
-        * Download the javascript dependencies with ```npm install``` (requires [Node.js/NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)  
-)
+        * Download the javascript dependencies with ```npm install``` (requires [Node.js/NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
         * Bundle them with ```browserify dependencies.js --s Extra --outfile out/extra.js```
 
 ## Possible improvements

@@ -19,15 +19,15 @@ args = parser.parse_args()
 
 coords = getCoordinatesFromStreetName(args.location)
 
-LAMPS = extractDB(args.location,args.distance)
+LAMPS = extractDB(args.location,int(args.distance))
 
-buildingsGdf = ox.geometries_from_point(getCoordinatesFromStreetName(args.location),dist=args.distance,tags={'building': True})
+buildingsGdf = ox.geometries_from_point(getCoordinatesFromStreetName(args.location),dist=int(args.distance),tags={'building': True})
 buildingsGdf = buildingsGdf[buildingsGdf.geom_type != 'Point']
 buildings = buildingsGdf.geometry
 
 M = folium.Map(location=coords, tiles="cartodb positron", zoom_start=20, control_scale=True, max_zoom = 21)
 
-Illuminance(LAMPS,buildings.to_json(),opacity=0.3,maxZoom=16,cellSize=args.cellSize,max=80).add_to(M)
+Illuminance(LAMPS,buildings.to_json(),opacity=0.3,maxZoom=16,cellSize=int(args.cellSize),max=80).add_to(M)
 
 displayGeoseries(M,buildings,style2)
 
