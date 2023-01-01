@@ -7,10 +7,13 @@ The position of street light sources and their characteristics is pulled from [a
 
 ![Place de l'Odéon](https://i.imgur.com/acGlfRh.gif)  
 Lighting simulation of *Place de l'Odéon*.  
-Notice the illuminance reading on the top right. Live example
+Notice the illuminance reading on the top right.
 
 ![simulation](https://i.imgur.com/c9CXBRb.gif)  
 Simulation of two light poles side to side.
+
+[**Live example**](https://izipakboy.github.io/Paris-lighting-simulation/index.html)  
+(Click anywhere to add a light source)
 
 ## Features  
 
