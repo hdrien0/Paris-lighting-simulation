@@ -144,7 +144,7 @@ Based on Leflet.idw, see the following comment.
     
     L.IlluminanceLayer = (L.Layer ? L.Layer : L.Class).extend({
 
-        initialize: function (lampsJSON, buildings, options) {
+        initialize: function (lampsJSON, voirieJSON, buildings, options) {
             var geojsonvt_opt = {
             
                 maxZoom: 24,  // max zoom to preserve detail on; can't be higher than 24
@@ -160,6 +160,7 @@ Based on Leflet.idw, see the following comment.
             
             };
             this._lamps = lampsJSON;
+            this._voirie = voirieJSON;
             this._lampMarkersLayer = {};
             this._buildings = buildings;
             this._tileIndex = geojsonvt(this._buildings,geojsonvt_opt);
@@ -407,6 +408,6 @@ Based on Leflet.idw, see the following comment.
         }
     });
     
-    L.illuminanceLayer = function (lampsJSON, buildings, options) {
-        return new L.IlluminanceLayer(lampsJSON, buildings, options);
+    L.illuminanceLayer = function (lampsJSON, voirieJSON, buildings, options) {
+        return new L.IlluminanceLayer(lampsJSON, voirieJSON, buildings, options);
     };

@@ -65,7 +65,7 @@ def commonCSVtoObject(file):
 
 def extractDB(location,dist=100,defaultLampHeight=10):
     lamps = lampCSVtoObject(extractStreetFromCSV("eclairage-public",location,dist),defaultLampHeight)
-    # voirie = commonCSVtoObject(extractStreetFromCSV("plan-de-voirie-chaussees",location,dist))
+    voirie = commonCSVtoObject(extractStreetFromCSV("plan-de-voirie-chaussees",location,dist))
     # volumes = commonCSVtoObject(extractStreetFromCSV("volumesbatisparis",location,dist))
     # return lamps, voirie, volumes
-    return lamps
+    return lamps,voirie

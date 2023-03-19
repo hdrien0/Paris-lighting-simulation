@@ -10,7 +10,8 @@ class Illuminance(JSCSSMixin, Layer):
     _template = Template(u"""
         {% macro script(this, kwargs) %}
             var {{ this.get_name() }} = L.illuminanceLayer(
-                {{ this.lampsJson }},
+                {{ this.lampsJSON }},
+                {{ this.voirieJSON }},
                 {{ this.buildings }},
                 {{ this.options|tojson }}
             ).addTo({{ this._parent.get_name() }});
@@ -29,13 +30,14 @@ class Illuminance(JSCSSMixin, Layer):
          
     ]
 
-    def __init__(self, lamps, buildings, opacity,
+    def __init__(self, lamps, voirie, buildings, opacity,
                  maxZoom, cellSize, name=None, max=None,
                  overlay=True, control=True, show=True, **kwargs):
         super(Illuminance, self).__init__(name=name, overlay=overlay,
                                       control=control, show=show)
         self._name = 'illuminance'
-        self.lampsJson = json.dumps([lamp.toDict() for lamp in lamps])
+        self.lampsJSON = json.dumps([lamp.toDict() for lamp in lamps])
+        self.voirieJSON = voirie.to_json()
         self.buildings = buildings
         self.options = parse_options(
             opacity=opacity,
